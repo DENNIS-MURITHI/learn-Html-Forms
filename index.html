@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1 id="title">Katheri Training Bootcamp </h1>
+    <p id="description">Please fill out this form with the required information</p>
+    <!-- form begins here -->
+     <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
+        <!-- create 3 sections using fieldsets below -->
+         <fieldset>
+            <label id="name-label"for="first-name"> Name: <input type="text" name="first-name" value="" id="name" required placeholder="Enter full name"></label>
+            <label id="email-label" for="email">Email: <input type="email" name="email" value="" id="email" required placeholder="xyz@gmail.com"></label>
+            <label id="password-label" for="new-password">Create a New Password: <input type="password" name="password" value="" id="new-password" pattern="[a-z0-5]{8,}"></label>
+         </fieldset>
+
+         <!-- type of account to be opened section -->
+         <fieldset>
+            <legend>Choose Identity(required)  </legend>
+               <label for="Student"><input class="inline" type="radio" name="identity-type" value="student" id="student-identity" checked> Student</label>
+               <label for="Trainer"><input class="inline" type="radio" name="identity-type" value="trainer" id="trainer-identity"> Trainer</label>
+         </fieldset>
+
+         <!-- Course you prefer to train or learn -->
+         <label for="referrer">
+            What do you prefer to train or learn?
+            <select name="select" class="referrer" id="dropdown">
+               <option value="">(select one)</option>
+               <option value="1">Data science</option>
+               <option value="2">Front End Develeopment</option>
+               <option value="3">Backend Development</option>
+               <option value="3">Full Stack Web Developemnt</option>
+               <option value="4">Dart with FLutter</option>
+              </select>
+          </label>
+
+         <fieldset>
+            <!-- choose file -->
+            <label for="profile-picture">
+               Upload a profile picture:
+               <input id="profile-picture" type="file" name="profile-picture">
+            </label>
+            <!-- enter age -->
+             <label for="name-label" id="number-label">
+               Input your age (years): 
+               <input id="number" type="number" min="18" max="40" name="name-label" value="" placeholder="18">
+             </label>
+
+             <!-- select as container with options -->
+             <label for="referrer" >
+               How did you hear about us?
+               <select name="select" class="referrer">
+                  <option value="">(select one)</option>
+                  <option value="1">facebook</option>
+                  <option value="2">youtube channel</option>
+                  <option value="3">Instagram</option>
+                  <option value="3">Referral</option>
+                  <option value="4">Other</option>
+                 </select>
+             </label>
+
+             <!-- textarea -->
+           <label for="bio">
+            Provide a bio:
+            <textarea name="bio" id="bio" rows="3" cols="30" placeholder="I like coding on the beach....">
+               
+            </textarea>
+          </label>
+         </fieldset>
+          
+         <label for="terms-and-conditions">
+            <input class="inline" type="checkbox" name="terms" value="terms-and-conditions" id="terms-and-conditions" required>
+            I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+         </label>
+         <label for="terms-and-conditions">
+            <input class="inline" type="checkbox" name="consent" value="consent" id="consent" required>
+          I agree and consent to terms and condtions above
+         </label>
+         <!-- submit button as descendant of form -->
+         <input id="submit" type="submit" name="submit" value="Submit">
+         
+     </form>
+</body>
+</html>
+
